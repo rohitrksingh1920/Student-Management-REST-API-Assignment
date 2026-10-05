@@ -1,11 +1,9 @@
 const logger = (req, res, next) => {
-    const currentTime = new Date().toLocaleString();
+  const currentTime = new Date().toLocaleString();
 
-    console.log(
-        `[${currentTime}] ${req.method} ${req.originalUrl}`
-    );
+  console.log(`[${currentTime}] ${req.method} ${req.originalUrl}`);
 
-    next();
+  next();
 };
 
 export default logger;
